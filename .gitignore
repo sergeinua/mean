@@ -1,12 +1,17 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-dist
-tmp
+/dist
+/tmp
 /out-tsc
+# Only exists if Bazel was run
+/bazel-out
 
 # dependencies
-node_modules
+/node_modules
+
+# profiling files
+chrome-profiler-events*.json
 
 # IDEs and editors
 /.idea
@@ -23,6 +28,7 @@ node_modules
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.history/*
 
 # misc
 /.sass-cache
@@ -37,3 +43,15 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+.firebase
+/src/app/template/items.ts
+/apps/mio-app/src/app/template/content.ts
+icon.png
+/apps/mio-app/src/assets/screenshots
+!/apps/mio-app/src/assets/screenshots/.gitkeep
+/apps/mio-admin-fe/src/assets/screenshots
+!/apps/mio-admin-fe/src/assets/screenshots/.gitkeep
+*.log
+
+.angular
