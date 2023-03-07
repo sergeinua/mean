@@ -55,3 +55,4 @@ icon.png
 *.log
 
 .angular
+.env
