@@ -17,7 +17,7 @@ import { JwtStrategy } from './jwt.strategy';
       inject: [ConfigService],
       useFactory: async (config: ConfigService) => ({
         secret: config.get<string>('JWT_SECRET'),
-        ignOptions: { expiresIn: '60s' },
+        signOptions: { expiresIn: '60s' },
       }),
     }),
     PassportModule,
